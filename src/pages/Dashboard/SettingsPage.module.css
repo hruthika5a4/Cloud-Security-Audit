@@ -1,0 +1,242 @@
+.settingsPage {
+    padding: var(--spacing-8);
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--color-text);
+    animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.topNavigation {
+    margin-bottom: var(--spacing-8);
+}
+
+.backBtn {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.backBtn:hover {
+    background: var(--color-bg);
+    color: var(--color-text);
+    border-color: var(--color-text-muted);
+    transform: translateX(-4px);
+}
+
+.header {
+    margin-bottom: var(--spacing-12);
+}
+
+.title {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    margin-bottom: var(--spacing-1);
+    color: var(--color-text);
+    letter-spacing: -0.03em;
+}
+
+.subtitle {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-base);
+}
+
+.card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+}
+
+.cardHeader {
+    padding: var(--spacing-8);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg);
+}
+
+.cardTitle {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-1);
+}
+
+.cardSubtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.form {
+    padding: var(--spacing-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.profileSection {
+    background: var(--color-bg);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}
+
+.avatarContainer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.avatarImage {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-bg-secondary);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatarImage:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.avatarPlaceholder {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 800;
+    border: 3px solid var(--color-bg-secondary);
+    box-shadow: var(--shadow-md);
+}
+
+.avatarActions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}
+
+.uploadBtn {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.uploadBtn:hover {
+    background: var(--color-bg);
+    color: var(--color-text);
+    border-color: var(--color-text-muted);
+    box-shadow: var(--shadow-sm);
+}
+
+.hiddenInput {
+    display: none;
+}
+
+.uploadHint {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    width: 100%;
+    max-width: 600px;
+}
+
+.label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text);
+    padding-left: 4px;
+}
+
+.input {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    transform: translateY(-1px);
+}
+
+.disabledInput {
+    color: var(--color-text-muted);
+    cursor: not-allowed;
+    background: var(--color-bg);
+    border-style: dashed;
+    box-shadow: none;
+}
+
+.inputHint {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    padding-left: 4px;
+}
+
+.formActions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: var(--spacing-4);
+    padding-top: var(--spacing-8);
+    border-top: 1px solid var(--color-border);
+}
+
+.errorMessage {
+    color: var(--color-danger);
+    background: rgba(239, 68, 68, 0.08);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    border-left: 4px solid var(--color-danger);
+}
+
+.successMessage {
+    color: var(--color-success);
+    background: rgba(16, 185, 129, 0.08);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    border-left: 4px solid var(--color-success);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

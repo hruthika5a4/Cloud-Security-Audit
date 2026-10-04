@@ -1,0 +1,70 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.otpContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+}
+
+.otpInput {
+  width: 48px;
+  height: 56px;
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  font-family: monospace;
+  font-weight: 700;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+@media (min-width: 400px) {
+  .otpInput {
+    width: 56px;
+    height: 64px;
+  }
+}
+
+.otpInput:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.otpInput.filled {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.submitBtn {
+  width: 100%;
+}
+
+.footerText {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-6);
+  padding-top: var(--spacing-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.linkButton {
+  color: var(--color-primary);
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}
+
+.linkButton:hover {
+  text-decoration: underline;
+}

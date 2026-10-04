@@ -1,0 +1,40 @@
+{
+  "name": "security-audit-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Security Audit Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-apprunner": "^3.1030.0",
+    "@aws-sdk/client-ec2": "^3.1004.0",
+    "@aws-sdk/client-eks": "^3.1030.0",
+    "@aws-sdk/client-elastic-load-balancing-v2": "^3.1030.0",
+    "@aws-sdk/client-iam": "^3.1004.0",
+    "@aws-sdk/client-lambda": "^3.1030.0",
+    "@aws-sdk/client-rds": "^3.1030.0",
+    "@aws-sdk/client-s3": "^3.1004.0",
+    "@google-cloud/bigquery": "^8.1.1",
+    "@google-cloud/compute": "^6.8.0",
+    "@google-cloud/resource-manager": "^6.2.1",
+    "@google-cloud/storage": "^7.19.0",
+    "@prisma/client": "^5.22.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "exceljs": "^4.4.0",
+    "express": "^4.18.2",
+    "googleapis": "^171.4.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^8.0.2",
+    "pdfkit": "^0.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "prisma": "^5.22.0"
+  }
+}

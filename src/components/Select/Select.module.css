@@ -1,0 +1,58 @@
+.selectWrapper {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+}
+
+.select {
+  width: 100%;
+  appearance: none; /* Remove native styling */
+  padding: var(--spacing-2) var(--spacing-8) var(--spacing-2) var(--spacing-4);
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.select:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.1);
+}
+
+.select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Style the native dropdown options dropdown somewhat consistently (browser-dependent) */
+.select option {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  padding: var(--spacing-2);
+}
+
+.iconWrapper {
+  position: absolute;
+  right: var(--spacing-3);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* So clicks pass through to the select element */
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+}
+
+.select:focus ~ .iconWrapper {
+  color: var(--color-primary);
+}
