@@ -7,8 +7,8 @@ const ScanHistoryPage = () => {
   const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:8000'
     : (window.location.hostname.includes('run.app') 
-        ? 'https://security-audit-accelerator-backend-196053730058.asia-south1.run.app' 
-        : 'https://security-audit-accelerator-backend-196053730058.asia-south1.run.app');
+        ? 'https://cloud-security-audit.onrender.com' 
+        : 'https://cloud-security-audit.onrender.com');
 
   const [scans, setScans] = useState([]);
   const [loading, setLoading] = useState(true);

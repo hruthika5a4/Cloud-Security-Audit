@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 const ForgotPasswordPage = () => {
   const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
     ? 'http://localhost:8000'
-    : 'https://security-audit-accelerator-backend-196053730058.asia-south1.run.app';
+    : 'https://cloud-security-audit.onrender.com';
 
   const [email,    setEmail]    = useState('');
   const [loading,  setLoading]  = useState(false);
