@@ -96,9 +96,7 @@ export const AuthProvider = ({ children }) => {
   // ── login ────────────────────────────────────────────────────────
   const login = async (email, password) => {
     try {
-      const API_BASE = window.location.hostname.includes('run.app') 
-        ? 'https://cloud-security-audit.onrender.com' 
-        : 'http://localhost:8000';
+      const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : 'https://cloud-security-audit.onrender.com';
       const response = await fetch(`${API_BASE}/api/auth/login`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -124,11 +122,7 @@ export const AuthProvider = ({ children }) => {
   // ── register ─────────────────────────────────────────────────────
   const register = async (name, email, password) => {
     try {
-      const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://localhost:8000'
-        : (window.location.hostname.includes('run.app') 
-            ? 'https://cloud-security-audit.onrender.com' 
-            : 'https://cloud-security-audit.onrender.com');
+      const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : 'https://cloud-security-audit.onrender.com';
       const response = await fetch(`${API_BASE}/api/auth/register`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -147,11 +141,7 @@ export const AuthProvider = ({ children }) => {
   // ── verifyOtp ─────────────────────────────────────────────────────
   const verifyOtp = async (email, otp) => {
     try {
-      const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://localhost:8000'
-        : (window.location.hostname.includes('run.app') 
-            ? 'https://cloud-security-audit.onrender.com' 
-            : 'https://cloud-security-audit.onrender.com');
+      const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : 'https://cloud-security-audit.onrender.com';
       const response = await fetch(`${API_BASE}/api/auth/verify-otp`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },

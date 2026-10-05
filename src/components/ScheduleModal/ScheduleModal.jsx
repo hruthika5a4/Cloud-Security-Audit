@@ -176,9 +176,7 @@ const ScheduleModal = ({ isOpen, onClose, projectId: initialProjectId, projectNa
                 if (spoofedDayOfMonth <= 0) spoofedDayOfMonth = 0; // Triggers end-of-previous-month logic natively in UTC
             }
 
-            const API_BASE = window.location.hostname.includes('run.app')
-                ? 'https://cloud-security-audit.onrender.com' 
-                : 'http://localhost:8000';
+            const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : 'https://cloud-security-audit.onrender.com';
 
             const token = localStorage.getItem('auditscope_token');
             const res = await fetch(`${API_BASE}/api/schedules`, {

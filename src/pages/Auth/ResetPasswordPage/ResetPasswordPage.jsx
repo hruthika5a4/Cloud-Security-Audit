@@ -6,9 +6,7 @@ import styles from './ResetPasswordPage.module.css';
 import toast from 'react-hot-toast';
 
 const ResetPasswordPage = () => {
-  const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-    ? 'http://localhost:8000'
-    : 'https://cloud-security-audit.onrender.com';
+  const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : 'https://cloud-security-audit.onrender.com';
 
   const [otp,             setOtp]             = useState('');
   const [newPassword,     setNewPassword]     = useState('');

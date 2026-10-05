@@ -77,9 +77,7 @@ const ScannerModal = ({ isOpen, onClose, provider, onScanComplete, onScanStatusC
       });
     }, 500);
 
-    const API_BASE = window.location.hostname.includes('run.app')
-      ? 'https://cloud-security-audit.onrender.com' 
-      : 'http://localhost:8000';
+    const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : 'https://cloud-security-audit.onrender.com';
     try {
       const token = localStorage.getItem('auditscope_token');
       let response;

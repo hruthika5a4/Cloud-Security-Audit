@@ -4,9 +4,7 @@ import Card from '../../components/Card/Card';
 import Button from '../../components/Button/Button';
 import ScheduleModal from '../../components/ScheduleModal/ScheduleModal';
 
-const API_BASE = window.location.hostname.includes('run.app') 
-  ? 'https://cloud-security-audit.onrender.com' 
-  : 'http://localhost:8000';
+const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : 'https://cloud-security-audit.onrender.com';
 const POLL_INTERVAL_MS = 30000; // 30 seconds
 
 const AutomationPage = () => {

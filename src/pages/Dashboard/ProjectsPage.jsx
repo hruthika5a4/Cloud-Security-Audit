@@ -3,11 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Card from '../../components/Card/Card';
 
 const ProjectsPage = () => {
-  const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://localhost:8000'
-    : (window.location.hostname.includes('run.app') 
-        ? 'https://cloud-security-audit.onrender.com' 
-        : 'https://cloud-security-audit.onrender.com');
+  const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : 'https://cloud-security-audit.onrender.com';
 
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);

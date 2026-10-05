@@ -4,9 +4,7 @@ import styles from './SettingsPage.module.css';
 import Button from '../../components/Button/Button';
 
 const SettingsPage = () => {
-    const API_BASE = window.location.hostname.includes('run.app')
-        ? 'https://cloud-security-audit.onrender.com' 
-        : 'http://localhost:8000';
+    const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : 'https://cloud-security-audit.onrender.com';
 
     const { user, login } = useContext(AuthContext);
 
